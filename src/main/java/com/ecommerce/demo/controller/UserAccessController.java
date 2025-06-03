@@ -2,18 +2,22 @@ package com.ecommerce.demo.controller;
 
 import com.ecommerce.demo.dto.CartResponseDTO;
 import com.ecommerce.demo.dto.ItemDTO;
+import com.ecommerce.demo.dto.ProductDTO;
 import com.ecommerce.demo.dto.ReviewDTO;
 import com.ecommerce.demo.dto.UserOrderResponse;
 import com.ecommerce.demo.exception.CartItemNotFoundException;
 import com.ecommerce.demo.exception.OrderItemNotFoundException;
 import com.ecommerce.demo.exception.OrderNotFoundException;
+import com.ecommerce.demo.exception.ProductNotFoundException;
 import com.ecommerce.demo.exception.ReviewNotFoundException;
 import com.ecommerce.demo.model.CartItem;
 import com.ecommerce.demo.model.Order;
+import com.ecommerce.demo.model.Product;
 import com.ecommerce.demo.model.Review;
 import com.ecommerce.demo.service.CartItemService;
 import com.ecommerce.demo.service.OrderItemService;
 import com.ecommerce.demo.service.OrderService;
+import com.ecommerce.demo.service.ProductService;
 import com.ecommerce.demo.service.ReviewService;
 
 import org.slf4j.*;
@@ -40,7 +44,35 @@ public class UserAccessController {
     
     @Autowired
     private CartItemService cartItemService;
+    
+    @Autowired
+    private ProductService productService;
 
+    
+    
+    // #################################//
+	// ********* PRODUCTS ENTITY *******//
+    //----------------------------------//
+
+	
+    // ********* GET ALL PRODUCTS ******//
+    @GetMapping("/getAllProducts")
+    public ResponseEntity<List<Product>> getAllProducts() {
+        List<Product> list =  productService.getAllProducts();
+        if(list.isEmpty()) {
+        	throw new ProductNotFoundException("Product list is empty");
+        } else {
+        	return new ResponseEntity<List<Product>>(list, HttpStatus.OK);
+        }
+        
+    }
+
+    // *********** GET PRODUCT BY ID *********//
+    @GetMapping("/getProductById/{id}")
+    public ResponseEntity<Optional<ProductDTO>> getProductById(@PathVariable Long id) {
+        Optional<ProductDTO> data = productService.getProductById(id);
+    	return new ResponseEntity<Optional<ProductDTO>>(data, HttpStatus.OK);
+    }
     
     // ###################################//
 	// ********* ORDER ENTITY ************//
