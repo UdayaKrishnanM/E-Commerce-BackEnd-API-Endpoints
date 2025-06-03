@@ -1,8 +1,8 @@
-Hello I have developed this called **E-Commerce-Backend-WebService-Restful-APIs** using **Spring Boot, Spring JPA, Spring Security, MySQL.**
+Hello I have developed this called **E-Commerce-Backend-WebServices-Restful-APIs** using **Spring Boot, Spring JPA, Spring Security, MySQL.**
 
-This Spring Boot project is a E-Commerece Backend Webservices designed for functionalities of E-Commerce. It features endpoints for adding, updating, listing, and deleting orders, products, order-items, reviews, users and cart-items. The application supports authentication for Admin/Users, ensuring secure access to each functionalities of repective roles. .
+This Spring Boot project is a E-Commerce Backend Webservices designed for functionalities of E-Commerce. It features endpoints for adding, updating, listing, and deleting orders, products, order-items, reviews, users and cart-items. The application supports authentication for Admin/Users, ensuring secure access to each functionality of respective roles.
 
-I have used entities Orders, Order-Item, Products, Cart-Items, Users and Reviews. Since ORDER is a reserved keyword in MySQL we cant use it so we use ORDERS.
+I have used entities Orders, Order-Item, Products, Cart-Items, Users and Reviews. Since ORDER is a reserved keyword in MySQL we can’t use it so we use ORDERS.
 
 
 `STEPS TO RUN THE PROJECT:`
@@ -15,70 +15,68 @@ I have used entities Orders, Order-Item, Products, Cart-Items, Users and Reviews
 
     2.3 Check out the PlayerDetails file in root folder. You can use that to upload in database for Player and Ranks table.
 
-4. Open terminal and enter this command (`./mvnw spring-boot:run`) or (`mvn spring-boot:run`)
+4. Open terminal and enter this command (`./mvnw spring-boot:run`)
+
 
 
 
 `ENDPOINTS:`
 
-PlayerController Endpoints
+UserController Endpoints
    
-   GET /addPlayer
-   URL: `http://localhost:8080/addPlayer`
-   Method: GET
-   Description: Displays the form to add a new player.
-   Requires Authentication: Yes
-   
-   POST /addPlayer
-   URL: `http://localhost:8080/addPlayer`
+   POST /register
+   URL: `http://localhost:8080/api/user/register `
    Method: POST
-   Description: Adds a new player.
-   Requires Authentication: Yes
-   
-   GET /listPlayers
-   URL: `http://localhost:8080/listPlayers`
-   Method: GET
-   Description: Lists all players.
+   Description: User can register their details.
    Requires Authentication: No
    
-   GET /deletePlayer
-   URL: `http://localhost:8080/deletePlayer`
+   GET /{email}
+   URL: `http://localhost:8080/api/user/{email} `
    Method: GET
-   Description: Displays the form to delete a player.
-   Requires Authentication: Yes
-   
-   POST /deletePlayer
-   URL: `http://localhost:8080/deletePlayer`
-   Method: POST
-   Description: Deletes a player based on ID.
-   Requires Authentication: Yes
-   
-   GET /pickTopPlayers
-   URL: `http://localhost:8080/pickTopPlayers`
-   Method: GET
-   Description: Displays the form to pick top players.
+   Description: User can view their profile details.
    Requires Authentication: No
    
-   GET /getTop11 
-   URL: `http://localhost:8080/getTop11`
-   Method: GET
-   Description: Lists the top 11 players based on the specified criteria (ODI, T20, Test).
+   POST /login
+   URL: `http://localhost:8080/api/user/login `
+   Method: POST
+   Description: User/Admin can login.
    Requires Authentication: No
    
-   GET /updatePlayer   
-   URL: `http://localhost:8080/updatePlayer`
-   Method: GET
-   Description: Displays the form to update a player's details.
-   Requires Authentication: Yes
+   DELETE /delete
+   URL: `http://localhost:8080/api/user/delete`
+   Method: DELETE
+   Description: User/Admin can delete their profile.
+   Requires Authentication: No
    
-   POST /updatePlayer   
-   URL: `http://localhost:8080/updatePlayer`
-   Method: POST
-   Description: Updates a player's details based on the specified type (age, department).
-   Requires Authentication: Yes
+      
+AdminLoginController Endpoints
+`PRODUCT:`
 
+   GET /
+   URL: `http://localhost:8080/`
+   Method: GET
+   Description: Displays the login page.
 
+`ORDERS:`
+   POST /
+   URL: `http://localhost:8080/`
+   Method: POST
+   Description: Processes the admin login.
+   Requires Authentication: No (for the login process itself)
    
+   GET /index
+   URL: `http://localhost:8080/index`
+   Method: GET
+   Description: Displays the index page after successful login.
+   Requires Authentication: Yes
+   
+   GET /logout
+   URL: `http://localhost:8080/logout`
+   Method: GET
+   Description: Logs out the admin and invalidates the session.
+   Requires Authentication: No (ends the session)
+   
+
 AdminLoginController Endpoints
 
    GET /
@@ -103,3 +101,4 @@ AdminLoginController Endpoints
    Method: GET
    Description: Logs out the admin and invalidates the session.
    Requires Authentication: No (ends the session
+
