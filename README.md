@@ -15,7 +15,7 @@ I have used entities Orders, Order-Item, Products, Cart-Items, Users and Reviews
 
     2.3 Check out the PlayerDetails file in root folder. You can use that to upload in database for Player and Ranks table.
 
-4. Open terminal and enter this command (`./mvnw spring-boot:run`)
+4. Open terminal and enter this command (`./mvnw spring-boot:run`) or (`mvn spring-boot:run`)
 
 
 
@@ -55,11 +55,15 @@ I have used entities Orders, Order-Item, Products, Cart-Items, Users and Reviews
    
         Requires Authentication: No
    
-   DELETE /delete
-   URL: `http://localhost:8080/api/user/delete`
-   Method: DELETE
-   Description: User/Admin can delete their profile.
-   Requires Authentication: No
+   4    DELETE /delete
+   
+        URL: `http://localhost:8080/api/user/delete`
+       
+        Method: DELETE
+       
+        Description: User/Admin can delete their profile.
+        
+        Requires Authentication: No
    
       
 `AdminBasedController Endpoints`
