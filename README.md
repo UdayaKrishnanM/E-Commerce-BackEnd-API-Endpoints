@@ -35,31 +35,22 @@ I have used entities Orders, Order-Item, Products, Cart-Items, Users and Reviews
    2   GET /{email}
    
        URL: `http://localhost:8080/api/user/{email}`
-   
        Method: GET
-       
        Description: User can view their profile details.
-       
        Requires Authentication: No
    
    3    POST /login
        
         URL: `http://localhost:8080/api/user/login`
-   
         Method: POST
-       
         Description: User/Admin can login.
-   
         Requires Authentication: No
    
    4    DELETE /delete
    
         URL: `http://localhost:8080/api/user/delete`
-       
         Method: DELETE
-       
         Description: User/Admin can delete their profile.
-        
         Requires Authentication: No
    
       
