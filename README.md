@@ -55,86 +55,99 @@ I have used entities Orders, Order-Item, Products, Cart-Items, Users and Reviews
    
       
 `AdminBasedController Endpoints`
-
-`PRODUCT (Authentication Required):`
-
-   GET /getAllProducts
-   URL: `http://localhost:8080/api/admin/getAllProducts`
-   Method: GET
-   Description: Displays all the Products.
-
-   GET /getProductById/{id}
-   URL: `http://localhost:8080/api/admin/getProductById/{id}`
-   Method: GET
-   Description: Display the Products using Product Id.
-
-   POST /createProduct
-   URL: `http://localhost:8080/api/admin/createProduct`
-   Method: POST
-   Description: Adds Product to the list.
+    
+    `PRODUCT (Authentication Required):`
+    
+       GET /getAllProducts
+           
+            URL: `http://localhost:8080/api/admin/getAllProducts`
+            Method: GET
+            Description: Displays all the Products.
+    
+       GET /getProductById/{id}
+    
+            URL: `http://localhost:8080/api/admin/getProductById/{id}`
+            Method: GET
+            Description: Display the Products using Product Id.
+    
+       POST /createProduct
+       
+            URL: `http://localhost:8080/api/admin/createProduct`
+            Method: POST
+            Description: Adds Product to the list.
 
    PUT /updateProduct/{id}
-   URL: `http://localhost:8080/api/admin/updateProduct/{id}`
-   Method: PUT
-   Description: Updates the product details.
+   
+        URL: `http://localhost:8080/api/admin/updateProduct/{id}`
+        Method: PUT
+        Description: Updates the product details.
 
    DELETE /deleteProduct/{id}
-   URL: `http://localhost:8080/api/admin/deleteProduct/{id}`
-   Method: DELETE
-   Description: Deletes the product from the list.
-
+   
+        URL: `http://localhost:8080/api/admin/deleteProduct/{id}`
+        Method: DELETE
+        Description: Deletes the product from the list.
 
 
 `ORDERS (Authentication Required):`
 
    GET /getAllOrdersByUserId/{id}
-   URL: `http://localhost:8080/api/admin/getAllOrdersByUserId/{id}`
-   Method: GET
-   Description: Admin can view all the users placed order using user’s id.
+   
+        URL: `http://localhost:8080/api/admin/getAllOrdersByUserId/{id}`
+        Method: GET
+        Description: Admin can view all the users placed order using user’s id.
    
    GET /getOrderById/{id}
-   URL: `http://localhost:8080/api/admin/getOrderById/{id}`
-   Method: GET
-   Description: Displays the order using Order Id.
+   
+        URL: `http://localhost:8080/api/admin/getOrderById/{id}`
+        Method: GET
+        Description: Displays the order using Order Id.
    
    PUT /updateOrderStatus/{id}
-   URL: `http://localhost:8080/api/admin/updateOrderStatus/{id}`
-   Method: POST
-   Description: Updates the Order’s details.
+   
+        URL: `http://localhost:8080/api/admin/updateOrderStatus/{id}`
+        Method: POST
+        Description: Updates the Order’s details.
 
 
 `ORDER-ITEM (Authentication Required):`
 
    GET /getAllOrderItems
-   URL: `http://localhost:8080/api/admin/getAllOrderItems`
-   Method: GET
-   Description: Displays all Order-Items.
+   
+        URL: `http://localhost:8080/api/admin/getAllOrderItems`
+        Method: GET
+        Description: Displays all Order-Items.
 
    GET /getAllOrderItemsByUserId/{id}
-   URL: `http://localhost:8080/api/admin/getAllOrderItemsByUserId/{id}`
-   Method: GET
-   Description: Displays the Order-Items placed by each Users.
+   
+        URL: `http://localhost:8080/api/admin/getAllOrderItemsByUserId/{id}`
+        Method: GET
+        Description: Displays the Order-Items placed by each Users.
 
    GET /getOrderItemById/{id}
-   URL: `http://localhost:8080/api/admin/getOrderItemById/{id}`
-   Method: GET
-   Description: Displays the Order-Item using Order-Item’s Id.
+   
+        URL: `http://localhost:8080/api/admin/getOrderItemById/{id}`
+        Method: GET
+        Description: Displays the Order-Item using Order-Item’s Id.
 
 
 `REVIEW (Authentication Required):`
 
    DELETE /deleteReview/{id}
-   URL: `http://localhost:8080/api/admin/deleteReview/{id}`
-   Method: DELETE
-   Description: Deletes the reviews from the list.
+   
+        URL: `http://localhost:8080/api/admin/deleteReview/{id}`
+        Method: DELETE
+        Description: Deletes the reviews from the list.
 
    GET /getReviewById/{id}
-   URL: `http://localhost:8080/api/admin/getReviewByUserId/{id}`
-   Method: GET
-   Description: Displays the reviews by Review’s ID.
+
+        URL: `http://localhost:8080/api/admin/getReviewByUserId/{id}`
+        Method: GET
+        Description: Displays the reviews by Review’s ID.
    
    GET /getAllReviews
-   URL: `http://localhost:8080/api/admin/getAllReviews`
+   
+        URL: `http://localhost:8080/api/admin/getAllReviews`
    Method: GET
    Description: Displays all the reviews in the list.
 
