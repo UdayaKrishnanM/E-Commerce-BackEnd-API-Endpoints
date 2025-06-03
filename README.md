@@ -28,11 +28,8 @@ I have used entities Orders, Order-Item, Products, Cart-Items, Users and Reviews
    1    POST /register
    
         URL: `http://localhost:8080/api/user/register`
-   
-        Method: POST
-       
+        Method: POST       
         Description: User can register their details.
-        
         Requires Authentication: No
 
    2   GET /{email}
