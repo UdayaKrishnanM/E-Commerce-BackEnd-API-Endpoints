@@ -97,11 +97,6 @@ I have used entities Orders, Order-Item, Products, Cart-Items, Users and Reviews
    URL: `http://localhost:8080/api/admin/updateOrderStatus/{id}`
    Method: POST
    Description: Updates the Order’s details.
-  
-   DELETE /deleteOrder/{id} `REMOVED`
-   URL: `http://localhost:8080/api/admin/deleteOrder/{id}`
-   Method: DELETE
-   Description: Deletesplays all the Products.
 
 
 `ORDER-ITEM (Authentication Required):`
