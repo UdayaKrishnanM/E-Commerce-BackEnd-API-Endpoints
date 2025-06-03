@@ -25,12 +25,15 @@ I have used entities Orders, Order-Item, Products, Cart-Items, Users and Reviews
 `UserController Endpoints`
 
    
-   POST /register
-   URL: `http://localhost:8080/api/user/register`
+   1    POST /register
    
-   Method: POST
-   Description: User can register their details.
-   Requires Authentication: No
+        URL: `http://localhost:8080/api/user/register`
+   
+        Method: POST
+       
+        Description: User can register their details.
+        
+        Requires Authentication: No
    
    GET /{email}
    URL: `http://localhost:8080/api/user/{email}`
