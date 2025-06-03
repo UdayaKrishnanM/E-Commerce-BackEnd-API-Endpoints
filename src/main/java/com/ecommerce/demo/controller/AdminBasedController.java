@@ -81,7 +81,7 @@ public class AdminBasedController {
 
     
     // *********** UPDATE PRODUCT BY ID *********//
-    @PatchMapping("/updateProduct/{id}")
+    @PutMapping("/updateProduct/{id}")
     public ResponseEntity<Optional<Product>> updateProduct(@PathVariable Long id, @RequestBody Product productDetails) {
         Optional<Product> data = productService.updateProduct(id, productDetails);
         if(data.isPresent()) {
@@ -154,18 +154,6 @@ public class AdminBasedController {
     
     }
 
-    
-    // *********** DELETE ORDER BY ID *********//
-    @DeleteMapping("/deleteOrder/{id}")
-    public ResponseEntity<String> deleteOrder(@PathVariable Long id) {
-    	
-    	String deleted =  orderService.deleteOrder(id);
-    	if(deleted != "Order ID Not Exists") {
-    		return new ResponseEntity<String>("Order id with " + id + " deleted succesfully" ,HttpStatus.OK);
-    	} else {
-    		throw new OrderNotFoundException("Order not found with id: " + id);
-    	}
-    }
     
     // *********** ORDER EXCEPTION HANDLER*********//
     @ExceptionHandler(OrderNotFoundException.class)
