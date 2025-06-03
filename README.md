@@ -22,7 +22,8 @@ I have used entities Orders, Order-Item, Products, Cart-Items, Users and Reviews
 
 `ENDPOINTS:`
 
-UserController Endpoints
+`UserController Endpoints`
+
    
    POST /register
    URL: `http://localhost:8080/api/user/register`
@@ -49,7 +50,8 @@ UserController Endpoints
    Requires Authentication: No
    
       
-AdminBasedController Endpoints
+`AdminBasedController Endpoints`
+
 `PRODUCT (Authentication Required):`
 
    GET /getAllProducts
@@ -78,6 +80,7 @@ AdminBasedController Endpoints
    Description: Deletes the product from the list.
 
 
+
 `ORDERS (Authentication Required):`
 
    GET /getAllOrdersByUserId/{id}
@@ -100,9 +103,8 @@ AdminBasedController Endpoints
    Method: DELETE
    Description: Deletesplays all the Products.
 
+
 `ORDER-ITEM (Authentication Required):`
-
-
 
    GET /getAllOrderItems
    URL: `http://localhost:8080/api/admin/getAllOrderItems`
@@ -118,6 +120,7 @@ AdminBasedController Endpoints
    URL: `http://localhost:8080/api/admin/getOrderItemById/{id}`
    Method: GET
    Description: Displays the Order-Item using Order-Item’s Id.
+
 
 `REVIEW (Authentication Required):`
 
@@ -137,7 +140,8 @@ AdminBasedController Endpoints
    Description: Displays all the reviews in the list.
 
 
-UsreAccessController Endpoints
+`UserAccessController Endpoints`
+
 `PRODUCT (Authentication Required):`
 
    GET /getAllProducts
@@ -149,6 +153,7 @@ UsreAccessController Endpoints
    URL: `http://localhost:8080/api/user/getProductById/{id}`
    Method: GET
    Description: Display the Products using Product Id.
+
 
 `ORDERS (Authentication Required):`
 
@@ -172,6 +177,7 @@ UsreAccessController Endpoints
    Method: DELETE
    Description: Deletes the Order from the list.
 
+
 `ORDER-ITEM (Authentication Required):`
 
    GET /getAllOrderItems
@@ -183,6 +189,7 @@ UsreAccessController Endpoints
    URL: `http://localhost:8080/api/user /getOrderItemById/{id}`
    Method: GET
    Description: Displays the Order-Item using Order-Item’s Id.
+
 
 `REVIEW (Authentication Required):`
 
@@ -215,6 +222,7 @@ UsreAccessController Endpoints
    URL: `http://localhost:8080/api/user/getReviewByUserId/{id}`
    Method: GET
    Description: Displays all the reviews in the list by a user.
+
 
 `CART-ITEMS (Authentication Required):`
 
