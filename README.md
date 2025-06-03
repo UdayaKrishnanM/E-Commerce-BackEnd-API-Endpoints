@@ -34,14 +34,16 @@ I have used entities Orders, Order-Item, Products, Cart-Items, Users and Reviews
         Description: User can register their details.
         
         Requires Authentication: No
+
+        
+    2  GET /{email}
+       URL: `http://localhost:8080/api/user/{email}`
+       Method: GET
+       Description: User can view their profile details.
+       Requires Authentication: No
+
    
-   GET /{email}
-   URL: `http://localhost:8080/api/user/{email}`
-   Method: GET
-   Description: User can view their profile details.
-   Requires Authentication: No
-   
-   POST /login
+   2    POST /login
    URL: `http://localhost:8080/api/user/login`
    Method: POST
    Description: User/Admin can login.
